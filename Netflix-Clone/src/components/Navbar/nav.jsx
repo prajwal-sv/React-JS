@@ -1,10 +1,14 @@
 import React from 'react'
 import './nav.css'
 import logo from '../../assets/logo.png'
+import Search_Icon from '../../assets/search_icon.svg'
+import profile_img from '../../assets/profile_img.png'
+import Bell_Icon from '../../assets/bell_icon.svg'
+import Caret_Icon from '../../assets/caret_icon.svg'
 
 const nav = () => {
   return (
-    <div>
+    <div className='navbar'>
       <div className="navbar-left">
         <img src={logo} alt="" />
         <ul>
@@ -17,8 +21,20 @@ const nav = () => {
         </ul>
       </div>
       <div className="navbar-right">
-        <img src="" alt="" />
+        <img src={Search_Icon} alt="" className='icon'/>
+        Clidern
+        <img src={Bell_Icon} alt="" className='icon'/>
+
+        <div className="navbar-profile">
+          <img src={profile_img} alt="" className='profile'/>
+          <img src={Caret_Icon} alt=""/>
+
+        </div>
+        <div className="drop-down">
+          <p>Sign out from netflix</p>
+        </div>
       </div>
+
     </div>
   )
 }
